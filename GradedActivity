@@ -1,0 +1,40 @@
+/**
+ * The GradedActivity Class
+ * 
+ * @author Angie Tirado
+ * @since 3/14/24
+ * @version 1.0
+ */
+public class GradedActivity{
+    //stores the score
+    private double score;
+    
+    /**
+     * The setScore() method will set the score
+     * @param s     //score
+     */
+    public void setScore(double s){
+        score = s;
+    }
+    
+    /**
+     * The getScore() method will retrieve the score
+     * @return  the score 
+     */
+    public double getScore(){
+        return score;
+    }
+    
+    /**
+     * The getGrade() method will check to see if the student got a Pass or a Fail
+     * @return   a Pass or a Fail Grade depending on the score
+     */
+    public char getGrade(){
+        if(score >= 70){
+            return 'P';
+        }
+        else{
+            return 'F';
+        }
+    }
+}
