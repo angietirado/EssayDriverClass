@@ -1,0 +1,96 @@
+/**
+ * The Essay Class
+ * @author Angue
+ */
+public class Essay extends GradedActivity{
+    //store the points for grammer
+    private double grammer;
+    //stores the points for spelling
+    private double spelling;
+    //stores the points for the correct Length of the essay
+    private double correctLength;
+    //stores the points for the content 
+    private double content;
+    
+    /**
+     * The setScore() method will get all of the scores that will add up to make the total value of the Essay 
+     * @param gr    //grammar score
+     * @param sp    //spelling score
+     * @param len   //length score
+     * @param cnt   //content score
+     */
+    public void setScore(double gr, double sp, double len, double cnt){
+        grammer = gr;
+        spelling = sp;
+        correctLength = len;
+        content = cnt;
+    }
+    
+    /**
+     * The setGrammer() method will store the grammar score
+     * @param g     the grammar score
+     */
+    public void setGrammer(double g){
+        grammer = g;
+    }
+    
+    /**
+     * The setSpelling() method will store the spelling score
+     * @param s     store the spelling score
+     */
+    public void setSpelling(double s){
+        spelling = s;
+    }
+    
+    /**
+     * The setCorrectLength() method will store the points given for having the correct length in the essay
+     * @param c     points given for the correct length
+     */
+    public void setCorrectLength(double c){
+        content = c;
+    }
+    
+    /**
+     * The setContent() method will store the points given for the essay content
+     * @param c     points given for the essay content
+     */
+    public void setContent(double c){
+        correctLength = c;
+    }
+    
+    /**
+     * The getGrammer() method will store the points given for grammar in the essay
+     * @return      the points given for grammar
+     */
+    public double getGrammer(){
+        return grammer;
+    }
+    
+    /**
+     * The getSpelling() method will return the points given for spelling
+     * @return  points given for spelling in the essay
+     */
+    public double getSpelling(){
+        return spelling;
+    }
+    
+    /**
+     * The getCorrectLength() method will return the points given for the correct length in the essay
+     * @return  points given for the correct length in the essay
+     */
+    public double getCorrectLength(){
+        return correctLength; 
+    }
+    
+    //Override the parent getScore() method
+    @Override
+    /**
+     * The getScore() method will return the total score of the grammar, spelling and correct length of the essay
+     * @return the total number of points in the essay
+     */
+    public double getScore(){
+        return + getGrammer() + getSpelling() + getCorrectLength();
+                
+    }
+    
+}
