@@ -1,0 +1,57 @@
+/**
+ * The CourseGrades Class
+ * @author Angie Tirado
+ */
+public class CourseGrades{
+    //creates an array that holds all of the grades
+    private GradedActivity[] grades;
+    //the number of grades that can be inputed maximum is 4
+    private int NUM_GRADES = 4;
+    
+    public CourseGrades(){
+        grades = new GradedActivity[4];
+    }
+    
+    /**
+     * The setLab() method will set the first element of the grades array into the value of aLab
+     * @param aLab      store the value into the first index of the grades array
+     */
+    public void setLab(GradedActivity aLab){
+        grades[0] = aLab;
+    }
+    
+    /**
+     * The setPassFailExam() method will set the second element of the grades array into the value of aPassFailExam
+     * @param aPassFailExam  store the value into the second index of the grades array
+     */
+    public void setPassFailExam(PassFailExam aPassFailExam){
+        grades[1] = aPassFailExam;
+    }
+    
+    /**
+     * The setEssay() method will set the third element of the grades array into the value of anEssay
+     * @param anEssay  store the value into the third index of the grades array
+     */
+    public void setEssay(Essay anEssay){
+        grades[2] = anEssay;
+    }
+    
+    /**
+     * The setFinalExam() method will set the fourth element of the grades array into the value of anEssay
+     * @param aFinalExam store the value into the fourth element of the grades array
+     */
+    public void setFinalExam(FinalExam aFinalExam){
+        grades[3] = aFinalExam;
+    }
+    
+    /**
+     * The toString method will return all of the points of all the lab, exam, and essay and then calculate the total score
+     * @return  the total score
+     */
+    //Overrides the toString() parent method
+    @Override
+    public String toString(){
+        return super.toString();
+    }
+    
+}
